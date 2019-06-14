@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "format": "prettier --write ./**/*.{html,js,json}",
+    "clean": "rimraf ./public/**/*.js",
+    "serve": "serve -n -c serve.json",
+    "compile": "babel src -d public",
+    "build": "yarn clean && yarn compile",
+    "build:watch": "yarn build -w"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.0",
+    "lit-html": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-private-methods": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "serve": "^11.0.1"
+  }
+}
